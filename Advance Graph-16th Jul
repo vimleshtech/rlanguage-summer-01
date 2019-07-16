@@ -1,0 +1,157 @@
+
+
+#choose  | switch 
+switch (1,"day1","day2")
+
+
+## Graph 
+x <- c(1:5)
+y <- x*2
+plot(x,y)
+
+#main : title 
+#ylab 
+#xlab
+#names.arg
+#rainbow()
+
+xname = c("alpha","beta","test","test2","ganga")
+
+plot(x,y,main = "Header ",ylab = "Y values",xlab="x values")
+
+barplot(x,y)
+
+barplot(x,y,names.arg = xname)
+
+
+
+##
+rainbow(5)
+rainbow(10)
+
+rainbow( length(x))
+
+
+
+barplot(x,y,names.arg = xname,col = rainbow(length(x)))
+
+barplot(x,y,names.arg = xname,col = c("red","green","black"))
+
+## 
+plot(x,y)
+
+barplot(x,y)
+
+plot(x,type = 'o')
+
+
+pie(x,col = rainbow(length(x)))
+  
+
+
+
+
+
+#
+##matrix
+v <- c(1:9)
+matrix(v,nrow = 3)
+matrix(v,nrow = 3,byrow = TRUE)
+
+##inbuilt data set 
+mtcars #show all data 
+str(mtcars) #show structure 
+View(mtcars) #show in table
+
+head(mtcars) #top 6 rows 
+
+##is   : check data type 
+a = 11 
+is.numeric(a)
+
+a ="ff"
+is.numeric(a)
+
+##as   : convert data type 
+a ="1"
+b ="2"
+c =a+b #error 
+
+a = as.numeric(a)  #type casting 
+b = as.numeric(b) #type casting 
+c =a+b 
+c
+
+
+
+##typeof : return data type 
+a =1
+b ="fjhfh"
+typeof(a)
+typeof(b)
+
+
+##heatmap 
+data=as.matrix(mtcars)
+
+
+head(data)
+
+heatmap(data)
+
+
+##Mosaic Map
+library(vcd)
+
+HairEyeColor
+
+mosaic(HairEyeColor, shade=TRUE, legend=TRUE)
+
+
+#
+library("plot3D")
+
+data(iris)
+iris
+str(iris)
+
+
+x <-  iris$Sepal.Length
+y <-  iris$Petal.Length
+z <-  iris$Sepal.Width
+
+scatter3D(x, y, z,  colvar = z, col = NULL, add = FALSE)
+
+text3D(x, y, z, labels, colvar = NULL, add = FALSE)
+
+points3D(x, y, z)
+
+lines3D(x, y, z )
+
+scatter2D(x, y, colvar = NULL, col = NULL, add = FALSE)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#
+install.packages("corrplot")
+
+library(corrplot)
+
+M<-cor(mtcars)
+corrplot(M, method="color")
+
+
+
+
+
